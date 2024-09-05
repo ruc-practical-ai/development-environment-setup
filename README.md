@@ -34,7 +34,7 @@ Git is a distributed version control system and exists to meet two needs that ar
 
 A collection of files version controlled in Git are called a *repository*. Repositories containing software also often contain other documentation files, including a `README.md` which explains the purpose of the repository and provides instructions to install it as a user or to contribute to it as a developer. This file (and the course syllabus along with other documentation we will use throughout the course) is a `README.md` file! Getting these files from the internet or a cloud environment to your local computer is called *cloning* the repository. Repositories are often called "repos" for short.
 
-In this class, our repositories will be hosted on the internet via [GitHub](https://github.com/) which is an online tool for hosting Git repositories. The course repositories can be found [here](https://github.com/ruc-data-viz). This [tutorial](https://github.com/ruc-data-viz/development-environment-setup) is a Git repository. The [course syllabus](https://github.com/ruc-data-viz/2024-spring-syllabus) and other instructional materials which will be provided throughout the semester are also Git repositories.
+In this class, our repositories will be hosted on the internet via [GitHub](https://github.com/) which is an online tool for hosting Git repositories. The course repositories can be found [here](https://github.com/ruc-practical-ai). This [tutorial](https://github.com/ruc-practical-ai/development-environment-setup) is a Git repository. The [course syllabus](https://github.com/ruc-practical-ai/syllabus) and other instructional materials which will be provided throughout the semester are also Git repositories.
 
 ### Installation
 
@@ -59,7 +59,7 @@ Using Git to download a version controlled repository from the internet (in this
 The following command shows how to clone the syllabus.
 
 ```bash
-git clone git@github.com:ruc-data-viz/2024-spring-syllabus.git
+git clone git@github.com:ruc-practical-ai/syllabus.git
 ```
 
 If you go to a Git repository on GitHub and click the green `code` button you will see the command you need to clone that repository. There are multiple commands you can use. We will cover those later in this tutorial.
@@ -416,7 +416,7 @@ ls --help
 
 #### Tip: Google it!
 
-As noted before, all of these commands are thoroughly documented online. You are always allowed to Google them and to Google errors you get in this course. Finding documentation online and using it to solve problems independently is a critical skill to learn academically and professionally. You can also use Large Language Models (LLMs) as provided by Bard, Bing Search, or use ChatGPT directly, as long as you adhere to the academic integrity policy and do not ask LLMs to do your work for you, and follow the Veterinary Dentists Law (see the [syllabus](https://github.com/ruc-data-viz/2024-spring-syllabus)) when using any artificial intelligence tools.
+As noted before, all of these commands are thoroughly documented online. You are always allowed to Google them and to Google errors you get in this course. Finding documentation online and using it to solve problems independently is a critical skill to learn academically and professionally. You can also use Large Language Models (LLMs) as provided by Bard, Bing Search, or use ChatGPT directly, as long as you adhere to the academic integrity policy and do not ask LLMs to do your work for you, and follow the Veterinary Dentists Law (see the [syllabus](https://github.com/ruc-practical-ai/syllabus)) when using any artificial intelligence tools.
 
 ## Python
 
@@ -837,7 +837,7 @@ Go to [https://github.com/settings/ssh/new](https://github.com/settings/ssh/new)
 
 You are now ready to clone the course syllabus!
 
-Go to a web browser and navigate to the syllabus page: [https://github.com/ruc-data-viz/2024-spring-syllabus](https://github.com/ruc-data-viz/2024-spring-syllabus).
+Go to a web browser and navigate to the syllabus page: [https://github.com/ruc-practical-ai/syllabus](https://github.com/ruc-practical-ai/syllabus).
 
 Then click the green `Code` button, click SSH, and copy the text there. Run the following command in Git Bash or your preferred shell to clone the repository.
 
@@ -848,7 +848,7 @@ git clone PASTED-TEXT
 Replace the PASTED-TEXT with the text you copied from the drop down under `Code` on GitHub. The actual command you run should look something like the following.
 
 ```bash
-git clone git@github.com:ruc-data-viz/2024-spring-syllabus.git
+git clone git@github.com:ruc-practical-ai/syllabus.git
 ```
 
 Be sure to do this in an area you have permissions to write, such as your home area. You can get to your home area with the following command.
