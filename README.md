@@ -12,7 +12,6 @@ The following tools are required for this course. We will introduce all of them 
 * **GitHub**: popular website for hosting Git repositories
 * **Git Bash**: Linux-like command prompt for windows (comes with Git on Windows)
 * **Python**: programming language ubiquitous in data science and machine learning (the latest version is 3.12 but any modern version > 3.8 will work for this class)
-* **contest**: tool used in this course for grading assignments
 * **Jupyter**: notebook environment for developing in Python
 
 The following tools are optional. VSCode is technically optional but is highly recommended. VSCode is so popular that you may find it harder to find help online and from your classmates if you choose another integrated development environment (IDE).
