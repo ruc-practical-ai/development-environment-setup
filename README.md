@@ -765,7 +765,7 @@ If you lose track of the order your Jupyter cells have been running in, you can 
 
 One example of the usefulness of Jupyter cells is in training machine learning models. When training a machine learning model, you may wish to try to train it, look at some visualizations to see how well it fits the data, and then retrain it if it does not fit well before moving on to test it. You may implement this workflow in Jupyter by having a "train" cell, a "visualization" cell, and a "test" cell. Then you can run the train cell multiple times, checking the visualization cell after each (and potentially running that cell a few times to adjust your plots) before moving on to the test cell once you are satisfied.
 
-## Optional: Poetry
+## Optional But Recommended: Poetry
 
 ### Introduction
 
@@ -797,6 +797,130 @@ Confirm poetry works by closing and reopening Git Bash, and then typing the foll
 
 ```bash
 poetry --version
+```
+
+### Pointing Poetry to the Correct Python Version
+
+Like most tools, Poetry needs to be pointed to the correct Python version to work correctly. A common source of errors is Poetry using an unexpected Python version.
+
+By now, we should know how to find where the version of Python we want to work with is installed on our system. Find this path and note it.
+
+To check which version of Python poetry is currently configured to use, run the following.
+
+```bash
+poetry env info
+```
+
+If this is not your preferred version, tell Poetry which Python to use with the following.
+
+```bash
+poetry env use /path/to/your/preferred/python.exe
+```
+
+Be sure to type the exact path, including the extension `.exe` on windows. On windows, this will look something like:
+
+```bash
+poetry env use ~/AppData/Local/Programs/Python/Python312/python.exe
+```
+
+### Using Poetry with VSCode
+
+When using Poetry with VSCode, we need to tell VSCode where to find the virtual environments that Poetry maintains for us. There are several ways we can do this.
+
+#### Launching VSCode from Poetry's Shell
+
+Poetry comes with its own shell that you can start at any time from bash using the following command.
+
+```bash
+cd poetry_project
+poetry shell
+```
+
+Note we must type this command from inside Poetry's directory. Once inside Poetry's shell (if this command worked it will print a message telling you that you are in poetry's shell) we can launch VSCode.
+
+```bash
+code .
+```
+
+This will start VSCode and we should be able to see the Poetry environment when running Python scripts or executing cells in notebooks. For example, to ensure a notebook uses Poetry's environment, navigate to the top corner of the notebook and click the `kernel` icon or the small icon showing the current version of python (e.g., `Python 3.12.1`). Click `Select Another Kernel`, then click `Python Environments...`, then click your preferred Poetry environment (it should say `Poetry Env`) next to it.
+
+#### Pointing VSCode to Poetry's Location for Storing Virtual Environments
+
+Launching VSCode from Poetry's shell is nice but what if we want to launch VSCode in a directory that sits outside a specific Poetry project and then migrate to a Poetry project within VSCode and use the Poetry environment?
+
+If we try to start Poetry's shell with `poetry shell` and we are outside a Poetry project, we will get an error message. Instead, we can launch code directly.
+
+```bash
+code .
+```
+
+Once in VSCode, we can use the side-panel to navigate to the project we want to use. Then we can open a terminal with `Ctrl` + `Shift` + `` ` ``.
+
+Tell Poetry you want it to create virtual environments in your current directory (so you can have different virtual environments per project).
+
+```bash
+poetry config virtualenvs.in-project true
+```
+
+Consider adding this line to your `.bashrc` or `.bash_profile`.
+
+Assuming we are already in the Poetry project directory (i.e., the directory that contains the `pyproject.toml`) we can then run the following command to see the list of Poetry environments available.
+
+```bash
+poetry env list
+```
+
+To see the path to these environments we do the following.
+
+```bash
+poetry env info --path
+```
+
+We can open the command pallette with `Ctrl` + `Shift` + `P` and type `Python: Select Interpreter`.
+
+Now specify that VSCode should use the that interpreter (the one in `./.venv/Scripts/python.exe`). Once you specify this, Jupyter notebooks should show the project's interpreter as an option when you click the `kernel` icon or the small icon showing the current version of python (e.g., `Python 3.12.1`) and then click `Select Another Kernel`, and finally click `Python Environments...`.
+
+### Basic Poetry Commands
+
+Poetry basics can be found [here](https://python-poetry.org/docs/basic-usage/). Information about managing poetry environments can be found [here](https://python-poetry.org/docs/managing-environments/).
+
+#### Creating a New Project
+
+This command is used to create a new Poetry project from scratch.
+
+```bash
+poetry new project-name
+```
+
+#### Initializing a Poetry Project in a Pre-existing Directory
+
+This command is used to take an existing project that is not a Poetry project and make it a Poetry project.
+
+```bash
+cd project_directory
+poetry init
+```
+
+#### Adding a New Dependency
+
+If you need to add a package to an existing Poetry project, use `add`.
+
+```bash
+poetry add matplotlib
+```
+
+#### Installing a Poetry Project
+
+Use this command to install a Poetry project and all its dependencies into your virtual environment.
+
+```bash
+poetry install
+```
+
+Use this command to install the dependencies in the `pyproject.toml` only (but not the project itself).
+
+```bash
+poetry install --no-root
 ```
 
 ## First Task: Setting Up Git and Cloning a Repository with SSH
