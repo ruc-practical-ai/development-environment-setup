@@ -782,6 +782,8 @@ Open PowerShell and run the following command.
 (Invoke-WebRequest -Uri https://install.python-poetry.org -UseBasicParsing).Content | py -
 ```
 
+If you have installed Python through the Microsoft Store, replace py with python in the command above.
+
 Use the following instructions to add Poetry to your path so Windows knows where to find it.
 
 1. Search for System Properties.
