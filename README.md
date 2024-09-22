@@ -20,9 +20,6 @@ The following tools are optional. VSCode is technically optional but is highly r
 
 It is helpful to practice installing these and other useful tools on your own so you can get comfortable searching the internet for the documentation on a new tool, reading the instructions, and learning how to use it on your own. This skill will help you in this course as you try new tools, and will help you professionally as you grow an ability to make independent contributions to software and data science teams.
 
-In the first class, we tried installing these tools without any hints besides where to find them on the internet. With that exercise complete, this tutorial provides all the required commands to install these on your own, along with a short introduction to each.
-
-
 ## Git and GitHub
 
 ### Introduction
@@ -456,7 +453,7 @@ Deep discussion of safety standards and the differences between interpreted and 
 
 Anaconda is a large (several GB) collection of Python tools and packages. The idea behind Anaconda is to make sure you have everything you need to use Python, which makes it especially popular in the data science community. Miniconda is a smaller collection (less than 1 GB). Keep in mind that if you are building a production system professionally, you should not have code you do not need on that system.
 
-Having extra code on a system means extra maintenance, extra memory usage, and extra risk. To avoid this, you should import only the packages you directly need to make your product work, rather than using a distribution of Python that preemptively includes many packages you *might* need for convenience. In security-critical environments, you will be required to provide a software bill of materials (SBOM) that lists every software dependency in your system. You want to keep your SBOM as small as possible to make auditing your system for security as expedient as possible. Further, Anaconda is not free to use commercially. So there may be license fees to consider if using it professionally.
+Having extra code on a system means extra maintenance, extra memory usage, and extra risk. To avoid this, you should import only the packages you directly need to make your product work, rather than using a distribution of Python that preemptively includes many packages you *might* need for convenience. In security-critical environments, you will be required to provide a software bill of materials (SBOM) that lists every software dependency in your system. You want to keep your SBOM as small as possible to make auditing your system for security as expedient as possible. Further, Anaconda is not free to use commercially. So there may be license fees to consider if using it professionally, which then must be baked into the cost of your product.
 
 #### Conda vs. Anaconda
 
@@ -619,6 +616,8 @@ It is important to understand where Python is installed on your system, how to c
 
 You are welcome to try out any of these tools in this course. All of them are optional, and you will be able to perform all assignments in this course without them. Remember when using these tools that you should still understand what tool you are interacting with Python through, in addition to knowing where that version of Python is installed, and how to confirm you are indeed interacting with the version of Python you think you are! This will help you avoid unexpected errors in both academic and professional settings.
 
+Also note that assignments and class notes will use Poetry to manage their dependencies. You do not need to know how to use Poetry to take the assignments and interact with the class note repositories, but it is helpful to review Poetry so you can understand what the repositories are setting up for you under the hood, in case you want to do that set up yourself later on.
+
 ## Optional but Highly Recommended: VSCode
 
 ### Introduction
@@ -767,9 +766,15 @@ One example of the usefulness of Jupyter cells is in training machine learning m
 
 ## Optional But Recommended: Poetry
 
+Assignments and class notes will manage their dependencies with Poetry. Using Poetry is not strictly required in this class but it is important to know how Poetry works so you can understand what the class repositories are automating for you in case you want to build your own repositories from scratch later on (for example, in working on a capstone project).
+
 ### Introduction
 
-When working on complex projects in Python, it can be difficult to keep track of what modules (e.g., `numpy`, `pandas`) and what versions of those modules your program depends on. Poetry is a useful tool for doing this. It is not mandatory in this course, but may be covered as a special topic depending on student interest.
+When working on complex projects in Python, it can be difficult to keep track of what modules (e.g., `numpy`, `pandas`) and what versions of those modules your program depends on. Poetry is a useful tool for doing this.
+
+Poetry helps with Python dependency management by completely automating the creation of a `pyproject.toml` file, which is a file used by Python build systems to define the dependencies needed by a Python package (collection of Python modules, themselves being `*.py` files, oranized into an installable tool) in a folder. Poetry can then use a `pyproject.toml` file to automatically create a virtual environment for that specific project, which is self contained in a folder inside that project's directory (or in another location of your chosing).
+
+This is a lighter weight method of managing the project's dependencies in a self-contained manner using a container and requires much less setup time compared to a container as long as we are familiar with the basic Poetry commends. For example, if we realize we forgot a dependency, we can simply add it with `poetry add <dependency>`. Poetry will then take care of updating our `pyproject.toml`, ensuring the versions of each package specified in the `pyproject.toml` do not conflict with each other. This automated management of version conflicts is one of the most powerful features of Poetry.
 
 ### Installation
 
@@ -805,7 +810,7 @@ poetry --version
 
 Like most tools, Poetry needs to be pointed to the correct Python version to work correctly. A common source of errors is Poetry using an unexpected Python version.
 
-By now, we should know how to find where the version of Python we want to work with is installed on our system. Find this path and note it.
+By now, we should know how to find where the version of Python we want to work with is installed on our system (see earlier sections of this guide for a reminder). Find this path and note it.
 
 To check which version of Python poetry is currently configured to use, run the following.
 
