@@ -772,7 +772,7 @@ Assignments and class notes will manage their dependencies with Poetry. Using Po
 
 When working on complex projects in Python, it can be difficult to keep track of what modules (e.g., `numpy`, `pandas`) and what versions of those modules your program depends on. Poetry is a useful tool for doing this.
 
-Poetry helps with Python dependency management by completely automating the creation of a `pyproject.toml` file, which is a file used by Python build systems to define the dependencies needed by a Python package (collection of Python modules, themselves being `*.py` files, oranized into an installable tool) in a folder. Poetry can then use a `pyproject.toml` file to automatically create a virtual environment for that specific project, which is self contained in a folder inside that project's directory (or in another location of your chosing).
+Poetry helps with Python dependency management by completely automating the creation of a `pyproject.toml` file, which is a file used by Python build systems to define the dependencies needed by a Python package (collection of Python modules, themselves being `*.py` files, organized into an installable tool) in a folder. Poetry can then use a `pyproject.toml` file to automatically create a virtual environment for that specific project, which is self contained in a folder inside that project's directory (or in another location of your chosing).
 
 This is a lighter weight method of managing the project's dependencies in a self-contained manner using a container and requires much less setup time compared to a container as long as we are familiar with the basic Poetry commends. For example, if we realize we forgot a dependency, we can simply add it with `poetry add <dependency>`. Poetry will then take care of updating our `pyproject.toml`, ensuring the versions of each package specified in the `pyproject.toml` do not conflict with each other. This automated management of version conflicts is one of the most powerful features of Poetry.
 
@@ -929,6 +929,34 @@ Use this command to install the dependencies in the `pyproject.toml` only (but n
 ```bash
 poetry install --no-root
 ```
+
+## Common Issues
+
+### Jupyter Kernels Do Not Show Up in VS Code when Using Codespaces
+
+When using a Jupyter notebook in VS Code it is necessary to select the kernel your want to use for the Jupyter notebook in the top right corner. If no kernels show up, that means that VS Code does not know where to find Python on your system. A few different fixes might be required depending on your specific environment, but some steps to try for different versions of this problem are listed in the following sections.
+
+#### When Using Codespaces in Browser
+
+In the browser, this can be fixed by finding the path to the virtual environment Poetry maintains.
+
+```bash
+poetry env info --path
+```
+
+Use `Ctrl/Cmd` + `Shift` + `P` &rarr; `Python: Select Interpreter` &rarr;  `Enter Interpreter Path` to tell VS Code to use this path.
+
+#### When using Codespaces Locally (Observed with MacOS)
+
+When using codespaces locally, try installing and uninstalling the `jupyter` extension by clicking `Extensions` &rarr; `Jupyter` &rarr; `Uninstall` &rarr; `Reinstall`.
+
+Then be sure the correct interpreter path is set by finding the path to Poetry's virtual environment
+
+```bash
+poetry env info --path
+```
+
+and then using `Ctrl/Cmd` + `Shift` + `P` &rarr; `Python: Select Interpreter` &rarr;  `Enter Interpreter Path` to tell VS Code to use this path.
 
 ## First Task: Setting Up Git and Cloning a Repository with SSH
 
