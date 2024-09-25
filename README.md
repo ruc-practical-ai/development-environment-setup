@@ -14,8 +14,8 @@ The following tools are required for this course. We will introduce all of them 
 * **Python**: programming language ubiquitous in data science and machine learning (the latest version is 3.12 but any modern version > 3.8 will work for this class)
 * **Jupyter**: notebook environment for developing in Python
 
-The following tools are optional. VSCode is technically optional but is highly recommended. VSCode is so popular that you may find it harder to find help online and from your classmates if you choose another integrated development environment (IDE).
-* **VSCode**: free IDE by Microsoft (optional)
+The following tools are optional. VS Code is technically optional but is highly recommended. VS Code is so popular that you may find it harder to find help online and from your classmates if you choose another integrated development environment (IDE).
+* **VS Code**: free IDE by Microsoft (optional)
 * **Poetry**: tool for keeping track of Python dependencies (optional in this class)
 
 It is helpful to practice installing these and other useful tools on your own so you can get comfortable searching the internet for the documentation on a new tool, reading the instructions, and learning how to use it on your own. This skill will help you in this course as you try new tools, and will help you professionally as you grow an ability to make independent contributions to software and data science teams.
@@ -564,11 +564,11 @@ This will show the first five folders in your PATH. You should verify the top tw
 
 **Note for MacOS:** When using Python on the command line in MacOS, the location where the `python` command points is usually a symlink to the actual location Python is installed. If your Python version is not what you expect it to be, you already tried editing your `$PATH` and you are using MacOS, this may be because the symlink is pointing to the wrong Python version. See [this](https://stackoverflow.com/questions/6819661/python-location-on-mac-osx) Stack Overflow answer to understand how to fix this.
 
-#### When Using VSCode
+#### When Using VS Code
 
-When using VSCode (or any other IDE), it is important to understand that you might not be interacting with the same Python interpreter that you are interacting with in your shell! This may be true even if you have a shell open inside VSCode.
+When using VS Code (or any other IDE), it is important to understand that you might not be interacting with the same Python interpreter that you are interacting with in your shell! This may be true even if you have a shell open inside VS Code.
 
-In VSCode, you can set your desired Python interpreter via the following steps.
+In VS Code, you can set your desired Python interpreter via the following steps.
 
 1. Open the command palette via `Ctrl` + `Shift` + `P`
 2. Type "Python: Select Interpreter"
@@ -576,9 +576,9 @@ In VSCode, you can set your desired Python interpreter via the following steps.
 
 #### When Using a Jupyter Notebook
 
-When using a Jupyter notebook inside VSCode, you can see which version of Python the IDE is using to execute the notebook by looking in the top right corner of the notebook.
+When using a Jupyter notebook inside VS Code, you can see which version of Python the IDE is using to execute the notebook by looking in the top right corner of the notebook.
 
-If you want to change the version VSCode uses for that notebook, click it, then click "select another kernel" in the command palette, then select your desired interpreter.
+If you want to change the version VS Code uses for that notebook, click it, then click "select another kernel" in the command palette, then select your desired interpreter.
 
 #### When Installing Packages with pip
 
@@ -618,33 +618,33 @@ You are welcome to try out any of these tools in this course. All of them are op
 
 Also note that assignments and class notes will use Poetry to manage their dependencies. You do not need to know how to use Poetry to take the assignments and interact with the class note repositories, but it is helpful to review Poetry so you can understand what the repositories are setting up for you under the hood, in case you want to do that set up yourself later on.
 
-## Optional but Highly Recommended: VSCode
+## Optional but Highly Recommended: VS Code
 
 ### Introduction
 
-VSCode is a free integrated development environment (IDE) by Microsoft. An IDE is a collection of tools to develop software. Modern IDEs can be augmented with various packages and extensions. You are encouraged to search for useful extensions to help you as you take on assignments. While you are welcome to use any IDE you like for this class, VSCode is highly recommended. VSCode is so popular currently that getting help from your classmates and the internet will be much easier using it.
+VS Code is a free integrated development environment (IDE) by Microsoft. An IDE is a collection of tools to develop software. Modern IDEs can be augmented with various packages and extensions. You are encouraged to search for useful extensions to help you as you take on assignments. While you are welcome to use any IDE you like for this class, VS Code is highly recommended. VS Code is so popular currently that getting help from your classmates and the internet will be much easier using it.
 
 ### Installation
 
-VSCode can be installed from [here](https://code.visualstudio.com/download). Click the link for your OS and follow the instructions. You can use all default settings.
+VS Code can be installed from [here](https://code.visualstudio.com/download). Click the link for your OS and follow the instructions. You can use all default settings.
 
 ### Basics
 
-A quick [7 minute introduction](https://www.youtube.com/watch?v=B-s71n0dHUk) to VSCode is recommended if you are completely new to it. A slightly longer [20 minute introduction](https://www.youtube.com/watch?v=ORrELERGIHs) is also helpful.
+A quick [7 minute introduction](https://www.youtube.com/watch?v=B-s71n0dHUk) to VS Code is recommended if you are completely new to it. A slightly longer [20 minute introduction](https://www.youtube.com/watch?v=ORrELERGIHs) is also helpful.
 
-VSCode has many [keyboard shortcuts](https://code.visualstudio.com/shortcuts/keyboard-shortcuts-windows.pdf). Learning them will help you work faster in it.
+VS Code has many [keyboard shortcuts](https://code.visualstudio.com/shortcuts/keyboard-shortcuts-windows.pdf). Learning them will help you work faster in it.
 
-#### Opening VSCode
+#### Opening VS Code
 
-You should have a shortcut on your desktop to open VSCode. If not, create one by searching for VSCode in your OS, opening its location, copying, and pasting a shortcut to your desktop. You can also open VSCode by searching for it in your OS search bar as you would any other program.
+You should have a shortcut on your desktop to open VS Code. If not, create one by searching for VS Code in your OS, opening its location, copying, and pasting a shortcut to your desktop. You can also open VS Code by searching for it in your OS search bar as you would any other program.
 
-To open VSCode in a particular folder, right click (or control-click for MacOS) that folder and click "Open with Code".
+To open VS Code in a particular folder, right click (or control-click for MacOS) that folder and click "Open with Code".
 
-To open VSCode in a folder from your shell, type `code .`.
+To open VS Code in a folder from your shell, type `code .`.
 
 #### Buttons and Sections
 
-The *activity bar* is on the left of VSCode's interface and has buttons for basic high level functions of VSCode.
+The *activity bar* is on the left of VS Code's interface and has buttons for basic high level functions of VS Code.
 
 These include the following.
 
@@ -659,11 +659,11 @@ Make a new file by clicking inside the explorer and typing `Ctrl` + `N`.
 
 #### Opening a New Editor
 
-Open an entirely new instance of VSCode with `Ctrl` + `Shift` + `N`.
+Open an entirely new instance of VS Code with `Ctrl` + `Shift` + `N`.
 
 #### Setting Your Default Python Interpreter
 
-Many tools within VSCode (like tools that provide tips on your code as you edit files) need to know where Python is installed on your system and which of potentially several Python installations you intend to use. If you haven't already noted where your preferred Python version is installed on your system, note it by using the `which` command.
+Many tools within VS Code (like tools that provide tips on your code as you edit files) need to know where Python is installed on your system and which of potentially several Python installations you intend to use. If you haven't already noted where your preferred Python version is installed on your system, note it by using the `which` command.
 
 ```bash
 ls -l $(which -a python)
@@ -701,7 +701,7 @@ print('Hello World!')
 
 Click the play button in the top right to run your script.
 
-A tutorial on getting started with VSCode in Python can be found [here](https://code.visualstudio.com/docs/python/python-quick-start).
+A tutorial on getting started with VS Code in Python can be found [here](https://code.visualstudio.com/docs/python/python-quick-start).
 
 #### Opening a Terminal
 
@@ -715,17 +715,36 @@ Above we pressed `F1` to open the command palette. The command palette can also 
 
 #### Picking a Theme
 
-It is fun to customize VSCode with themes. Press `F1` and then type "Preferences: Color Theme" or just "Theme". Use the up and down arrows to select a theme you like!
+It is fun to customize VS Code with themes. Press `F1` and then type "Preferences: Color Theme" or just "Theme". Use the up and down arrows to select a theme you like!
 
 #### Helpful Extensions
 
-VSCode is readily extensible and has an active community developing extensions for it. You are encouraged to try out new extensions during this class. Some that you will find helpful are listed here.
+VS Code is readily extensible and has an active community developing extensions for it. You are encouraged to try out new extensions during this class. Some that you will find helpful are listed here.
 
 * **ms-python.debugpy**: Python debugger extension
 * **ms-python.python**: Python extension
 * **ms-python.vscode-pylance**: Python inline error checking and other support
 * **ms-toolsai.jupyter**: Jupyter support
 * **streetsidesoftware.code-spell-checker**: Spell checking inside your code
+
+#### Tip: Maximize your Terminal with a Keyboard Shortcut
+
+If you like to work in the terminal and need a way to maximize the terminal without interrupting your workflow you can add a keyboard shortcut to VS Code for this.
+
+Start with `Ctrl/Cmd` + `Shift` + `P` to open the command pallette and then type `Preferences: Open Keyboard Shortcuts (JSON)`.
+
+Add the following inside the square brackets to the `keybindings.json` file.
+
+```json
+    {
+        "key": "ctrl+shift+m",
+        "command": "workbench.action.toggleMaximizedPanel"
+    }
+```
+
+#### Tip: See a List of Keyboard Shortcuts
+
+To see the list of keyboard shortcuts that VS Code has configured for you, use `Ctrl/Cmd` + `Shift` + `P` to open the command pallette and type `Preferences: Open Default Keyboard Shortcuts (JSON)`.
 
 ## Jupyter
 
@@ -764,7 +783,7 @@ If you lose track of the order your Jupyter cells have been running in, you can 
 
 One example of the usefulness of Jupyter cells is in training machine learning models. When training a machine learning model, you may wish to try to train it, look at some visualizations to see how well it fits the data, and then retrain it if it does not fit well before moving on to test it. You may implement this workflow in Jupyter by having a "train" cell, a "visualization" cell, and a "test" cell. Then you can run the train cell multiple times, checking the visualization cell after each (and potentially running that cell a few times to adjust your plots) before moving on to the test cell once you are satisfied.
 
-## Optional But Recommended: Poetry
+## Optional but Recommended: Poetry
 
 Assignments and class notes will manage their dependencies with Poetry. Using Poetry is not strictly required in this class but it is important to know how Poetry works so you can understand what the class repositories are automating for you in case you want to build your own repositories from scratch later on (for example, in working on a capstone project).
 
@@ -830,11 +849,11 @@ Be sure to type the exact path, including the extension `.exe` on windows. On wi
 poetry env use ~/AppData/Local/Programs/Python/Python312/python.exe
 ```
 
-### Using Poetry with VSCode
+### Using Poetry with VS Code
 
-When using Poetry with VSCode, we need to tell VSCode where to find the virtual environments that Poetry maintains for us. There are several ways we can do this.
+When using Poetry with VS Code, we need to tell VS Code where to find the virtual environments that Poetry maintains for us. There are several ways we can do this.
 
-#### Launching VSCode from Poetry's Shell
+#### Launching VS Code from Poetry's Shell
 
 Poetry comes with its own shell that you can start at any time from bash using the following command.
 
@@ -843,17 +862,17 @@ cd poetry_project
 poetry shell
 ```
 
-Note we must type this command from inside Poetry's directory. Once inside Poetry's shell (if this command worked it will print a message telling you that you are in poetry's shell) we can launch VSCode.
+Note we must type this command from inside Poetry's directory. Once inside Poetry's shell (if this command worked it will print a message telling you that you are in poetry's shell) we can launch VS Code.
 
 ```bash
 code .
 ```
 
-This will start VSCode and we should be able to see the Poetry environment when running Python scripts or executing cells in notebooks. For example, to ensure a notebook uses Poetry's environment, navigate to the top corner of the notebook and click the `kernel` icon or the small icon showing the current version of python (e.g., `Python 3.12.1`). Click `Select Another Kernel`, then click `Python Environments...`, then click your preferred Poetry environment (it should say `Poetry Env`) next to it.
+This will start VS Code and we should be able to see the Poetry environment when running Python scripts or executing cells in notebooks. For example, to ensure a notebook uses Poetry's environment, navigate to the top corner of the notebook and click the `kernel` icon or the small icon showing the current version of python (e.g., `Python 3.12.1`). Click `Select Another Kernel`, then click `Python Environments...`, then click your preferred Poetry environment (it should say `Poetry Env`) next to it.
 
-#### Pointing VSCode to Poetry's Location for Storing Virtual Environments
+#### Pointing VS Code to Poetry's Location for Storing Virtual Environments
 
-Launching VSCode from Poetry's shell is nice but what if we want to launch VSCode in a directory that sits outside a specific Poetry project and then migrate to a Poetry project within VSCode and use the Poetry environment?
+Launching VS Code from Poetry's shell is nice but what if we want to launch VS Code in a directory that sits outside a specific Poetry project and then migrate to a Poetry project within VS Code and use the Poetry environment?
 
 If we try to start Poetry's shell with `poetry shell` and we are outside a Poetry project, we will get an error message. Instead, we can launch code directly.
 
@@ -861,7 +880,7 @@ If we try to start Poetry's shell with `poetry shell` and we are outside a Poetr
 code .
 ```
 
-Once in VSCode, we can use the side-panel to navigate to the project we want to use. Then we can open a terminal with `Ctrl` + `Shift` + `` ` ``.
+Once in VS Code, we can use the side-panel to navigate to the project we want to use. Then we can open a terminal with `Ctrl` + `Shift` + `` ` ``.
 
 Tell Poetry you want it to create virtual environments in your current directory (so you can have different virtual environments per project).
 
@@ -885,7 +904,7 @@ poetry env info --path
 
 We can open the command pallette with `Ctrl` + `Shift` + `P` and type `Python: Select Interpreter`.
 
-Now specify that VSCode should use the that interpreter (the one in `./.venv/Scripts/python.exe`). Once you specify this, Jupyter notebooks should show the project's interpreter as an option when you click the `kernel` icon or the small icon showing the current version of python (e.g., `Python 3.12.1`) and then click `Select Another Kernel`, and finally click `Python Environments...`.
+Now specify that VS Code should use the that interpreter (the one in `./.venv/Scripts/python.exe`). Once you specify this, Jupyter notebooks should show the project's interpreter as an option when you click the `kernel` icon or the small icon showing the current version of python (e.g., `Python 3.12.1`) and then click `Select Another Kernel`, and finally click `Python Environments...`.
 
 ### Basic Poetry Commands
 
@@ -1015,14 +1034,14 @@ Be sure to do this in an area you have permissions to write, such as your home a
 cd ~
 ```
 
-Finally, you can open the syllabus in VSCode but navigating to the directory using the `cd` command and then opening VSCode using `code .`. The `.` tells VSCode to open in the current directory.
+Finally, you can open the syllabus in VS Code but navigating to the directory using the `cd` command and then opening VS Code using `code .`. The `.` tells VS Code to open in the current directory.
 
 ```bash
 cd 2024-spring-syllabus
 code .
 ```
 
-Click on the `README.md` file to open it. There is a preview button in the top right corner of VSCode's screen which should allow you to view the file the same way it is viewed on the internet.
+Click on the `README.md` file to open it. There is a preview button in the top right corner of VS Code's screen which should allow you to view the file the same way it is viewed on the internet.
 
 Now the our development environment is set up we are ready to begin coding. This would be a good time to practice many of the commands for Git and Bash / Git Bash that were covered earlier in this course.
 
@@ -1074,7 +1093,7 @@ Once you have cloned the repository, navigate into it with `cd`.
 cd example
 ```
 
-Use VSCode or the command line to create a file called `hello.py`. Populate the file with the following text.
+Use VS Code or the command line to create a file called `hello.py`. Populate the file with the following text.
 
 ```python
 print("Hello World!")
