@@ -1037,7 +1037,7 @@ cd ~
 Finally, you can open the syllabus in VS Code but navigating to the directory using the `cd` command and then opening VS Code using `code .`. The `.` tells VS Code to open in the current directory.
 
 ```bash
-cd 2024-spring-syllabus
+cd syllabus
 code .
 ```
 
